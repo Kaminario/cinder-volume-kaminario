@@ -17,10 +17,9 @@ FROM registry.access.redhat.com/rhosp13/openstack-cinder-volume:latest
 MAINTAINER Kaminario
 LABEL name="rhosp13/openstack-cinder-volume-kaminario"
 LABEL vendor="Kaminario"
-LABEL version="1"
+LABEL version="2"
 LABEL summary="cinder-volume image pre-installed with krest"
 LABEL description="openstack cinder volume docker image with Kaminario's krest dependency pre-installed"
-LABEL license="Apache License, Version 2.0"
 #LABEL release="latest"
 
 # switch to root to install packages
