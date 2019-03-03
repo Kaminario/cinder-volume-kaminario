@@ -32,7 +32,7 @@ RUN pip install krest
 
 # create licenses directory and copy LICENSE file to it
 RUN mkdir licenses
-ADD ../LICENSE licenses/
+ADD licenses/LICENSE.txt licenses/
 
 # switch the container back to the default user
 USER cinder
