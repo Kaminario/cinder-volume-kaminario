@@ -30,6 +30,10 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "/tmp/get-pip.py"
 RUN python /tmp/get-pip.py
 RUN pip install krest
 
+# create licenses directory and copy LICENSE file to it
+RUN mkdir licenses
+ADD ../LICENSE licenses/
+
 # switch the container back to the default user
 USER cinder
 
