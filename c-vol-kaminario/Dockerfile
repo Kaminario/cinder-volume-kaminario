@@ -20,6 +20,7 @@ LABEL vendor="Kaminario"
 LABEL version="1.0.0"
 LABEL summary="cinder-volume image pre-installed with krest"
 LABEL description="openstack cinder volume docker image with Kaminario's krest dependency pre-installed"
+LABEL license="Apache License, Version 2.0"
 #LABEL release="latest"
 
 # switch to root to install packages
@@ -29,10 +30,6 @@ USER root
 RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "/tmp/get-pip.py"
 RUN python /tmp/get-pip.py
 RUN pip install krest
-
-# create licenses directory and copy LICENSE file to it
-RUN mkdir licenses
-ADD licenses/LICENSE licenses/
 
 # switch the container back to the default user
 USER cinder
